@@ -17,7 +17,7 @@ module "this" {
 module "s3-bucket" {
   source  = "bancoripleyperu/s3-bucket/aws"
   version = "0.0.4"
-  
+
   bucket = "titan-dev-test-pipeline"
 
   tags = {
@@ -30,7 +30,7 @@ module "iam-role" {
   version = "0.0.3"
 
   name         = "titan-dev-test"
-  aws_services = ["codepipeline.amazonaws.com","codebuild.amazonaws.com"]
+  aws_services = ["codepipeline.amazonaws.com", "codebuild.amazonaws.com"]
 
   tags = {
     Project = "titan"
